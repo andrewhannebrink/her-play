@@ -2,7 +2,7 @@
   "name": "her-play-book",
   "version": "1.0.0",
   "description": "Marketing page for HER PLAY book by Karolina Pelc",
-  "homepage": "https://YOUR_GITHUB_USERNAME.github.io/YOUR_REPO_NAME",
+  "homepage": "https://andrewhannebrink.github.io/her-play",
   "private": true,
   "dependencies": {
     "react": "^18.2.0",

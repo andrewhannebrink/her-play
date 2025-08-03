@@ -3,6 +3,7 @@ import './BookAnimation.css';
 
 const BookAnimation = ({ scrollProgress, bookContent }) => {
   const [currentPage, setCurrentPage] = useState(-1);
+  const [pageStates, setPageStates] = useState({});
   
   // Parse content from content.md
   const pages = [
@@ -53,11 +54,34 @@ const BookAnimation = ({ scrollProgress, bookContent }) => {
   useEffect(() => {
     if (scrollProgress <= 1) {
       setCurrentPage(-1);
+      setPageStates({});
     } else {
-      const pageProgress = (scrollProgress - 1) * 2; // Each page takes 0.5 scroll units
-      const targetPage = Math.floor(pageProgress);
+      // Each page has a flip phase (0.5) and a pause phase (0.5)
+      const pageProgress = (scrollProgress - 1);
+      const pageIndex = Math.floor(pageProgress);
+      const pagePhase = pageProgress - pageIndex;
+      
       // Don't flip beyond the last page
-      setCurrentPage(Math.min(targetPage, pages.length - 1));
+      const currentPageIndex = Math.min(pageIndex, pages.length - 1);
+      
+      // Update page states
+      const newPageStates = {};
+      pages.forEach((page, index) => {
+        if (index < currentPageIndex) {
+          newPageStates[page.id] = 'flipped';
+        } else if (index === currentPageIndex && pagePhase < 0.5) {
+          // First half of scroll: page is flipping
+          newPageStates[page.id] = 'flipping';
+        } else if (index === currentPageIndex && pagePhase >= 0.5) {
+          // Second half of scroll: page is fully flipped, paused
+          newPageStates[page.id] = 'flipped';
+        } else {
+          newPageStates[page.id] = 'unflipped';
+        }
+      });
+      
+      setCurrentPage(currentPageIndex);
+      setPageStates(newPageStates);
     }
   }, [scrollProgress, pages.length]);
 
@@ -126,12 +150,26 @@ const BookAnimation = ({ scrollProgress, bookContent }) => {
             </div>
           </div>
           
-          {pages.map((page, index) => (
-            <div 
-              key={page.id}
-              className={`book-page ${currentPage >= index ? 'flipped' : ''}`}
-              style={{ zIndex: pages.length - index }}
-            >
+          {pages.map((page, index) => {
+            // Dynamic z-index based on flip state
+            let zIndex;
+            if (pageStates[page.id] === 'flipped') {
+              // Flipped pages go to the back
+              zIndex = index;
+            } else if (pageStates[page.id] === 'flipping') {
+              // Currently flipping page on top
+              zIndex = pages.length + 10;
+            } else {
+              // Unflipped pages maintain their stack order
+              zIndex = pages.length - index;
+            }
+            
+            return (
+              <div 
+                key={page.id}
+                className={`book-page ${pageStates[page.id] || ''}`}
+                style={{ zIndex }}
+              >
               <div className="page-inner">
                 <div className="page-front">
                   {renderPageContent(page, 'front')}
@@ -141,7 +179,8 @@ const BookAnimation = ({ scrollProgress, bookContent }) => {
                 </div>
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>

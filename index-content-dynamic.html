@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HER PLAY - Dynamic Content Version</title>
+    
+    <!-- Same styles as before -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #0a0a0a;
+        }
+        
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #cc2e29 0%, #8b1e1a 100%);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 600px;
+        }
+        
+        .book-cover {
+            max-width: 400px;
+            margin: 2rem auto;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .book-cover img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        h1 { font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 1rem; }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem; }
+        p { margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.8; }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #cc2e29 0%, #ff4741 100%);
+            color: white;
+            padding: 1rem 3rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.125rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(204, 46, 41, 0.4);
+        }
+        
+        /* Hide Webflow content divs */
+        .webflow-content {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- WEBFLOW CONTENT CONTAINERS (Hidden) -->
+    <!-- Add these as Webflow text elements that Karolina can edit -->
+    <div class="webflow-content">
+        <div id="wf-book-title">HER PLAY</div>
+        <div id="wf-book-subtitle">A Book by Karolina Pelc</div>
+        <div id="wf-hero-description">Sign up to register your interest and get notified as soon as it's available!</div>
+        <div id="wf-author-bio">Founder | Investor | Mentor | Author</div>
+        <div id="wf-author-ps">PS. What if you Fly?</div>
+        <div id="wf-about-intro">How did I go from the gritty casino floors of Warsaw to the sun-soaked luxury of Sir Richard Branson's private retreat?</div>
+        <div id="wf-cta-text">Join the Waitlist</div>
+        <div id="wf-cover-image">cover_image.png</div>
+    </div>
+    
+    <!-- YOUR CUSTOM DESIGN -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 id="book-title"></h1>
+            <p id="book-subtitle"></p>
+            
+            <div class="book-cover">
+                <img id="cover-img" src="" alt="Book Cover">
+            </div>
+            
+            <div class="glass-card">
+                <h2>Book Launch Coming Soon!</h2>
+                <p id="hero-description"></p>
+                <a href="#" class="btn-primary" id="cta-button"></a>
+            </div>
+            
+            <p style="margin-top: 2rem;">
+                <strong>Karolina Pelc</strong><br>
+                <span id="author-bio"></span>
+            </p>
+            <p style="font-style: italic;" id="author-ps"></p>
+        </div>
+    </section>
+    
+    <script>
+        // Function to pull content from Webflow elements
+        function loadWebflowContent() {
+            // Map Webflow content to your custom design
+            const contentMap = {
+                'book-title': 'wf-book-title',
+                'book-subtitle': 'wf-book-subtitle',
+                'hero-description': 'wf-hero-description',
+                'author-bio': 'wf-author-bio',
+                'author-ps': 'wf-author-ps',
+                'cta-button': 'wf-cta-text'
+            };
+            
+            // Load text content
+            for (const [targetId, sourceId] of Object.entries(contentMap)) {
+                const source = document.getElementById(sourceId);
+                const target = document.getElementById(targetId);
+                if (source && target) {
+                    target.textContent = source.textContent;
+                }
+            }
+            
+            // Load image
+            const imgSource = document.getElementById('wf-cover-image');
+            const imgTarget = document.getElementById('cover-img');
+            if (imgSource && imgTarget) {
+                imgTarget.src = imgSource.textContent;
+            }
+        }
+        
+        // Load content when page loads
+        document.addEventListener('DOMContentLoaded', loadWebflowContent);
+        
+        // For Webflow: Re-load content after Webflow initializes
+        if (window.Webflow) {
+            window.Webflow.push(function() {
+                loadWebflowContent();
+            });
+        }
+    </script>
+</body>
+</html>

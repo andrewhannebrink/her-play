@@ -1,0 +1,83 @@
+# Home
+## Book Launch Coming Soon!
+- Sign up to register your interest and get notified as soon as it’s available! By joining the waitlist, you’ll get exclusive updates and behind-the-scenes insights!
+- [Join the Waitlist](https://herplay.com/book-waitlist)
+- email input element
+- checkbox element "Yes, I have read the Privacy Policy and Terms & Conditions and agree to the processing and storage of my data for the purpose of responding to my request."
+- Karolina Pelc
+Founder | Investor I Mentor | Author
+- PS. What if you Fly?
+- As seen on
+  - TechCrunch
+  - ABC News
+  - EGR
+  - Yahoo! News
+  - SBC
+  - Next.io
+# About the Book
+How did I go from the gritty casino floors of Warsaw to the sun-soaked luxury of Sir Richard Branson’s private retreat?
+
+People love asking for a formula for success, as if there’s some neatly packaged blueprint—ten steps, a morning routine, a life hack that guarantees a one-way ticket to the top.
+
+For years, I dismissed the question. I wasn’t following a formula. I was following momentum—switching industries, taking jobs I wasn’t qualified for (yet), moving countries on instinct, launching a startup with a newborn in one arm and a pitch deck in the other.
+
+At the time, there was no master plan—just a deep-seated instinct for knowing when to jump. But looking back, I see it now. A pattern. A rhythm. A way of turning risk into opportunity and change into a competitive edge. Maybe I did have a formula after all. And maybe this book is my way of defining it.
+
+But beyond the strategies, the leaps, and the bold moves, there’s something else—something that rarely gets talked about in the success playbooks. The invisible forces shaping how we take risks, how we chase ambition, and how we respond to failure. It’s not just about market trends or business models—it’s about something deeper. The psychology of transformation. The way identity, mindset, and intuition shape our ability to adapt, evolve, and move forward when the next step isn’t clear.
+
+Drawing from my own experiences in traditionally male-dominated spaces—where both strategic execution and intuitive adaptability were essential—I explore the evolving constructs of masculinity and femininity. I examine their societal origins, shifting relevance, and how they shape leadership, ambition, and self-definition. True power, I argue, comes from fluidly integrating structure and flexibility, action and instinct, drive and alignment—without sacrificing authenticity.
+
+This isn’t just a collection of stories. It’s a map of a mindset—one that turns setbacks into fuel, bold decisions into momentum, and challenges into stepping stones. It’s about what separates those who take risks from those who stay put—not just courage, but clarity. Not just ambition, but action. The ability to own your story before someone else writes it for you.
+
+As Richard Branson put it, "You don’t learn to walk by following rules. You learn by doing, and by falling over." Until you don’t.
+
+So, join me. We won’t just map out the how—we’ll uncover the why. The instinct that keeps us moving when comfort tells us to slow down. The drive to evolve when the world shifts around us. The mindset that makes us leap, even when the ground ahead isn’t visible.
+
+At best, I’ll give you the formula everyone wants. At the very least, we’ll have one hell of a story to tell.
+
+Want to be the first to know when the book drops?
+
+Sign up to register your interest and get notified as soon as it’s available! The book is set to launch in just a few months, and by joining the waitlist, you’ll get exclusive updates, behind-the-scenes insights, and maybe even a sneak peek before the official release.
+
+As a little personal touch, I’ll be signing the first 500 copies! I’m no celebrity author, but I know how special it feels to have something signed just for you. Don’t you think so too?
+
+'''
+Join the Exclusive Waitlist for My Upcoming Book
+Join Waitlist
+'''
+
+# About Karolina
+‍Karolina Pelc is a widely recognized entrepreneur, investor, storyteller, and thought leader in the gaming and tech industries. Named a Top Startup Development Voice in 2023 by LinkedIn, she is the Founder and former CEO of BeyondPlay, a B2B gaming software company that secured €7M+ in funding before its landmark acquisition by FanDuel in 2024—one of the fastest exits in the industry, cementing her reputation as a visionary leader and strategic innovator.
+
+Post-acquisition, Karolina continues shaping the future of gaming as a VP at FanDuel, while actively mentoring and investing in startups. Looking beyond gaming, she founded HerPlay, not just as an investment entity, but as a platform for amplifying underrepresented voices in entrepreneurship. Through HerPlay, she brings together capital, connections, and mentorship—giving promising startups the support they need to scale, while also driving thought leadership and public discourse on the future of innovation and leadership.
+
+Beyond business and investment, Karolina is currently working on her upcoming book, where she shares insights from her journey in a way she’s never done before. As a frequent keynote speaker, she captivates audiences with bold perspectives on entrepreneurship, leadership, and reinvention, delivering thought-provoking talks at global industry events.
+
+With over 20 years in the real-money gaming industry, Karolina has held pivotal leadership roles at LeoVegas Group (MGM) and Betsson Group and consulted for major brands like SG Digital, William Hill, and Hard Rock Online. She also served on the Board of Directors for the Nasdaq-listed Gaming Innovation Group.
+
+As a prolific content creator, Karolina shares her entrepreneurial journey, leadership insights, and candid reflections on navigating high-stakes industries, breaking barriers in male-dominated spaces, and embracing change as a competitive advantage. She built BeyondPlay in the public eye, offering raw, unfiltered lessons that inspire founders, executives, and change-makers.
+
+Her influence is widely recognized, with features in Business Insider and ABC News, and accolades such as being named one of the Top 40 Under 40 Emerging Leaders in Gaming. Highlights of her journey include pitching at TechCrunch Startup Battlefield, attending Richard Branson’s Leadership Summit on Necker Island, and earning multiple industry award nominations.
+
+A sought-after public speaker, podcast guest, and former Next.io host, Karolina is known for her ability to ignite change and challenge conventional thinking. Her passion for innovation, community-building, and bold decision-making continues to position her as a trailblazer in gaming, tech, investment, and entrepreneurship.
+
+# About HerPlay
+HerPlay is an investment vehicle and mentorship platform founded by Karolina Pelc, designed to pay it forward by advising, mentoring, and supporting early-stage founders, with a particular focus on female entrepreneurs. Through HerPlay, Karolina leverages her extensive industry experience, investment network, and influence to connect promising startups with capital, strategic partners, and potential customers. She acts as a bridge between founders and investors, helping visionary entrepreneurs gain access to the resources they need to scale their businesses.
+
+Beyond investment and mentorship, HerPlay serves as a platform for Karolina’s thought leadership and public speaking, where she delivers keynote speeches on a diverse range of topics, sharing insights on entrepreneurship, innovation, personal branding, and her original framework for success in life and business.
+
+At its core, HerPlay is built on the belief that every founder’s journey matters—because success isn’t one-size-fits-all. It’s a creative outlet where Karolina documents and shares her past, present, and future journey—through social media content and the publication of her business memoirs in book form. By amplifying diverse stories of ambition, resilience, and reinvention, HerPlay ensures that there is truly A Seat for Every Story.
+
+‍Karolina Pelc’s HerPlay investment portfolio reflects her commitment to innovation, impact, and forward-thinking entrepreneurship. She strategically backs early-stage startups that are reshaping industries and driving meaningful change—giving more founders the opportunity to write their own success stories
+HerPlay is an investment vehicle and mentorship platform founded by Karolina Pelc, designed to pay it forward by advising, mentoring, and supporting early-stage founders, with a particular focus on female entrepreneurs. Through HerPlay, Karolina leverages her extensive industry experience, investment network, and influence to connect promising startups with capital, strategic partners, and potential customers. She acts as a bridge between founders and investors, helping visionary entrepreneurs gain access to the resources they need to scale their businesses.
+
+Beyond investment and mentorship, HerPlay serves as a platform for Karolina’s thought leadership and public speaking, where she delivers keynote speeches on a diverse range of topics, sharing insights on entrepreneurship, innovation, personal branding, and her original framework for success in life and business.
+
+At its core, HerPlay is built on the belief that every founder’s journey matters—because success isn’t one-size-fits-all. It’s a creative outlet where Karolina documents and shares her past, present, and future journey—through social media content and the publication of her business memoirs in book form. By amplifying diverse stories of ambition, resilience, and reinvention, HerPlay ensures that there is truly A Seat for Every Story.
+
+‍Karolina Pelc’s HerPlay investment portfolio reflects her commitment to innovation, impact, and forward-thinking entrepreneurship. She strategically backs early-stage startups that are reshaping industries and driving meaningful change—giving more founders the opportunity to write their own success stories
+
+© 2025 HerPlay
+Privacy Policy
+Terms & Conditions
+{linked in icon with link to https://www.linkedin.com/in/karolinapelc/}

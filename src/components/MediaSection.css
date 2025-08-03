@@ -1,0 +1,37 @@
+/* Media Section */
+.media-heading {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 2rem;
+}
+
+.media-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  opacity: 0.8;
+}
+
+.media-logo {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.3s ease;
+}
+
+.media-logo:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+@media (max-width: 768px) {
+  .media-logos {
+    gap: 1rem;
+  }
+  
+  .media-logo {
+    font-size: 1rem;
+  }
+}

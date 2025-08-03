@@ -1,0 +1,53 @@
+/* Book Cover Animation */
+.book-cover-wrapper {
+  position: relative;
+  margin: 2rem auto;
+  width: min(400px, 90vw);
+  height: 600px;
+  perspective: 1000px;
+}
+
+.book-cover {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: floatRotate 6s ease-in-out infinite;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.book-cover:hover {
+  animation-play-state: paused;
+}
+
+.book-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 
+    0 20px 40px rgba(0,0,0,0.4),
+    0 40px 80px rgba(0,0,0,0.2);
+}
+
+@keyframes floatRotate {
+  0%, 100% {
+    transform: translateY(0) rotateY(-5deg) rotateX(2deg);
+  }
+  25% {
+    transform: translateY(-10px) rotateY(5deg) rotateX(-2deg);
+  }
+  50% {
+    transform: translateY(-20px) rotateY(-3deg) rotateX(3deg);
+  }
+  75% {
+    transform: translateY(-10px) rotateY(3deg) rotateX(-1deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .book-cover-wrapper {
+    height: 500px;
+  }
+}

@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HER PLAY - A Book by Karolina Pelc | Coming Soon</title>
+    <meta name="description" content="Join the waitlist for HER PLAY by Karolina Pelc. A journey from Warsaw casino floors to Richard Branson's private retreat. Discover the formula for turning risk into opportunity.">
+    <meta name="keywords" content="Karolina Pelc, HER PLAY, business book, entrepreneurship, leadership, women in tech, gaming industry">
+    <meta name="author" content="Karolina Pelc">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="HER PLAY - A Book by Karolina Pelc">
+    <meta property="og:description" content="From Warsaw casino floors to Silicon Valley success. Join the exclusive waitlist for Karolina Pelc's upcoming book.">
+    <meta property="og:image" content="cover_image.png">
+    <meta property="og:url" content="https://herplay.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="HER PLAY - A Book by Karolina Pelc">
+    <meta name="twitter:description" content="From Warsaw casino floors to Silicon Valley success. Join the exclusive waitlist.">
+    <meta name="twitter:image" content="cover_image.png">
+    
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #0a0a0a;
+            overflow-x: hidden;
+        }
+        
+        /* Typography */
+        h1, h2, h3 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            letter-spacing: -0.02em;
+        }
+        
+        h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            letter-spacing: -0.01em;
+        }
+        
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+            font-size: clamp(1rem, 2vw, 1.125rem);
+            line-height: 1.8;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Section with Parallax */
+        .hero {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, #cc2e29 0%, #8b1e1a 100%);
+        }
+        
+        .parallax-bg {
+            position: absolute;
+            top: -20%;
+            left: -20%;
+            width: 140%;
+            height: 140%;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(255,255,255,0.05) 0%, transparent 50%);
+            transform: translateZ(0);
+            will-change: transform;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+        }
+        
+        /* Book Cover Animation */
+        .book-cover-wrapper {
+            position: relative;
+            margin: 2rem auto;
+            width: min(400px, 90vw);
+            height: 600px;
+            perspective: 1000px;
+        }
+        
+        .book-cover {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: floatRotate 6s ease-in-out infinite;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .book-cover:hover {
+            animation-play-state: paused;
+            transform: rotateY(10deg) rotateX(-5deg) scale(1.05);
+        }
+        
+        .book-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 
+                0 20px 40px rgba(0,0,0,0.4),
+                0 40px 80px rgba(0,0,0,0.2);
+        }
+        
+        @keyframes floatRotate {
+            0%, 100% {
+                transform: translateY(0) rotateY(-5deg) rotateX(2deg);
+            }
+            25% {
+                transform: translateY(-10px) rotateY(5deg) rotateX(-2deg);
+            }
+            50% {
+                transform: translateY(-20px) rotateY(-3deg) rotateX(3deg);
+            }
+            75% {
+                transform: translateY(-10px) rotateY(3deg) rotateX(-1deg);
+            }
+        }
+        
+        /* Glassmorphic Card */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 
+                0 8px 32px 0 rgba(31, 38, 135, 0.2),
+                inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 
+                0 12px 40px 0 rgba(31, 38, 135, 0.3),
+                inset 0 1px 0 0 rgba(255, 255, 255, 0.3);
+        }
+        
+        /* Waitlist Form */
+        .waitlist-form {
+            max-width: 500px;
+            margin: 3rem auto;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+        }
+        
+        .form-group input[type="email"] {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .form-group input[type="email"]:focus {
+            outline: none;
+            border-color: rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .form-group input[type="email"]::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+        
+        .checkbox-group input[type="checkbox"] {
+            margin-top: 0.25rem;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+        
+        .checkbox-group label {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.4;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #cc2e29 0%, #ff4741 100%);
+            color: white;
+            padding: 1rem 3rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.125rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(204, 46, 41, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(204, 46, 41, 0.4);
+            background: linear-gradient(135deg, #ff4741 0%, #cc2e29 100%);
+        }
+        
+        /* Section Styles */
+        .section {
+            padding: 5rem 0;
+            position: relative;
+        }
+        
+        .section-dark {
+            background: #0a0a0a;
+            color: white;
+        }
+        
+        .section-light {
+            background: #f8f8f8;
+            color: #333;
+        }
+        
+        .section-red {
+            background: linear-gradient(135deg, #cc2e29 0%, #8b1e1a 100%);
+            color: white;
+        }
+        
+        /* Parallax Sections */
+        .parallax-section {
+            position: relative;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        .parallax-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 120%;
+            background-size: cover;
+            background-position: center;
+            will-change: transform;
+        }
+        
+        /* Media Logos */
+        .media-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            opacity: 0.8;
+        }
+        
+        .media-logo {
+            font-weight: 600;
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.7);
+            transition: color 0.3s ease;
+        }
+        
+        .media-logo:hover {
+            color: rgba(255, 255, 255, 1);
+        }
+        
+        /* About Sections */
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .highlight-text {
+            color: #cc2e29;
+            font-weight: 600;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #0a0a0a;
+            color: rgba(255, 255, 255, 0.7);
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .social-link {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background: #cc2e29;
+            transform: translateY(-3px);
+        }
+        
+        /* Animations on Scroll */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .book-cover-wrapper {
+                height: 500px;
+            }
+            
+            .glass-card {
+                padding: 1.5rem;
+            }
+            
+            .media-logos {
+                gap: 1rem;
+            }
+            
+            .media-logo {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="parallax-bg"></div>
+        <div class="container hero-content">
+            <h1 class="fade-in" id="book-title"></h1>
+            <p class="fade-in" style="font-size: 1.5rem; margin-bottom: 2rem;" id="book-subtitle"></p>
+            
+            <div class="book-cover-wrapper fade-in">
+                <div class="book-cover">
+                    <img id="book-cover-img" src="" alt="">
+                </div>
+            </div>
+            
+            <div class="glass-card fade-in">
+                <h2 id="hero-heading"></h2>
+                <p id="hero-description"></p>
+                
+                <form class="waitlist-form" action="#" method="POST" id="waitlist-form">
+                    <div class="form-group">
+                        <input type="email" name="email" id="email-input" placeholder="" required>
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <label for="privacy" id="privacy-label"></label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-primary" id="cta-button"></button>
+                </form>
+            </div>
+            
+            <p class="fade-in" style="font-size: 1.25rem; margin-top: 2rem;">
+                <strong id="author-name"></strong><br>
+                <span id="author-tagline"></span>
+            </p>
+            
+            <p class="fade-in" style="font-style: italic; font-size: 1.125rem;" id="author-ps"></p>
+        </div>
+    </section>
+    
+    <!-- As Seen On -->
+    <section class="section section-dark">
+        <div class="container">
+            <h3 class="fade-in" style="text-align: center; color: rgba(255, 255, 255, 0.7); margin-bottom: 2rem;" id="media-heading"></h3>
+            <div class="media-logos fade-in" id="media-logos-container">
+                <!-- Media logos will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- About the Book -->
+    <section class="section section-light parallax-section">
+        <div class="parallax-layer" style="background: linear-gradient(135deg, rgba(204, 46, 41, 0.05) 0%, rgba(139, 30, 26, 0.05) 100%);"></div>
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="about-content">
+                <h2 class="fade-in" id="about-book-heading"></h2>
+                
+                <p class="fade-in" id="about-book-intro"></p>
+                <p class="fade-in" id="about-book-p1"></p>
+                <p class="fade-in" id="about-book-p2"></p>
+                <p class="fade-in" id="about-book-p3"></p>
+                <p class="fade-in" id="about-book-p4"></p>
+                <p class="fade-in" id="about-book-p5"></p>
+                <p class="fade-in" id="about-book-p6"></p>
+                <p class="fade-in" id="about-book-quote"></p>
+                <p class="fade-in" id="about-book-p7"></p>
+                <p class="fade-in" id="about-book-p8"></p>
+                
+                <div class="glass-card fade-in" style="background: rgba(204, 46, 41, 0.1); border-color: rgba(204, 46, 41, 0.3); margin-top: 3rem;">
+                    <h3 id="waitlist-cta-heading"></h3>
+                    <p id="waitlist-cta-p1"></p>
+                    <p id="waitlist-cta-p2"></p>
+                    <a href="#" class="btn-primary" id="waitlist-cta-button"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Karolina -->
+    <section class="section section-red parallax-section">
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="about-content">
+                <h2 class="fade-in" id="about-karolina-heading"></h2>
+                
+                <p class="fade-in" id="about-karolina-p1"></p>
+                <p class="fade-in" id="about-karolina-p2"></p>
+                <p class="fade-in" id="about-karolina-p3"></p>
+                <p class="fade-in" id="about-karolina-p4"></p>
+                <p class="fade-in" id="about-karolina-p5"></p>
+                <p class="fade-in" id="about-karolina-p6"></p>
+                <p class="fade-in" id="about-karolina-p7"></p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About HerPlay -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="fade-in" id="about-herplay-heading"></h2>
+                
+                <p class="fade-in" id="about-herplay-p1"></p>
+                <p class="fade-in" id="about-herplay-p2"></p>
+                <p class="fade-in" id="about-herplay-p3"></p>
+                <p class="fade-in" id="about-herplay-p4"></p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="#" class="social-link" id="linkedin-link" target="_blank" rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-link" id="instagram-link" target="_blank" rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1112.324 0 6.162 6.162 0 01-12.324 0zM12 16a4 4 0 110-8 4 4 0 010 8zm4.965-10.405a1.44 1.44 0 112.881.001 1.44 1.44 0 01-2.881-.001z"/>
+                    </svg>
+                </a>
+            </div>
+            
+            <div class="footer-links">
+                <a href="#" id="privacy-link"></a>
+                <a href="#" id="terms-link"></a>
+            </div>
+            
+            <p id="copyright"></p>
+        </div>
+    </footer>
+    
+    <script>
+        // Content Bridge - Loads content from Webflow elements
+        function loadContent() {
+            // Helper function to get content
+            function getContent(selector) {
+                const element = document.querySelector(`[data-content="${selector}"]`);
+                return element ? element.textContent.trim() : '';
+            }
+            
+            // Helper function to set text content
+            function setText(elementId, contentKey) {
+                const element = document.getElementById(elementId);
+                const content = getContent(contentKey);
+                if (element && content) {
+                    element.textContent = content;
+                }
+            }
+            
+            // Helper function to set HTML content (for quotes)
+            function setHTML(elementId, contentKey) {
+                const element = document.getElementById(elementId);
+                const content = getContent(contentKey);
+                if (element && content) {
+                    // Handle quote formatting
+                    if (content.includes('"')) {
+                        element.innerHTML = content.replace(/"/g, '"').replace(/"/g, '"');
+                    } else {
+                        element.innerHTML = content;
+                    }
+                }
+            }
+            
+            // Hero Section
+            setText('book-title', 'book-title');
+            setText('book-subtitle', 'book-subtitle');
+            setText('hero-heading', 'hero-heading');
+            setText('hero-description', 'hero-description');
+            setText('author-name', 'author-name');
+            setText('author-tagline', 'author-tagline');
+            setText('author-ps', 'author-ps');
+            
+            // Book Cover
+            const bookCoverImg = document.getElementById('book-cover-img');
+            const bookCoverUrl = getContent('book-cover-image');
+            const bookCoverAlt = getContent('book-cover-alt');
+            if (bookCoverImg && bookCoverUrl) {
+                bookCoverImg.src = bookCoverUrl;
+                bookCoverImg.alt = bookCoverAlt || 'Book Cover';
+            }
+            
+            // Form Elements
+            const emailInput = document.getElementById('email-input');
+            const emailPlaceholder = getContent('email-placeholder');
+            if (emailInput && emailPlaceholder) {
+                emailInput.placeholder = emailPlaceholder;
+            }
+            
+            setText('privacy-label', 'privacy-text');
+            setText('cta-button', 'cta-button');
+            
+            // Form Action
+            const form = document.getElementById('waitlist-form');
+            const formUrl = getContent('waitlist-url');
+            if (form && formUrl) {
+                form.action = formUrl;
+            }
+            
+            // Media Section
+            setText('media-heading', 'media-heading');
+            
+            // Media Logos
+            const mediaLogosContainer = document.getElementById('media-logos-container');
+            const mediaLogos = getContent('media-logos');
+            if (mediaLogosContainer && mediaLogos) {
+                const logos = mediaLogos.split(',').map(logo => logo.trim());
+                mediaLogosContainer.innerHTML = logos.map(logo => 
+                    `<span class="media-logo">${logo}</span>`
+                ).join('');
+            }
+            
+            // About Book Section
+            setText('about-book-heading', 'about-book-heading');
+            setText('about-book-intro', 'about-book-intro');
+            setText('about-book-p1', 'about-book-p1');
+            setText('about-book-p2', 'about-book-p2');
+            setText('about-book-p3', 'about-book-p3');
+            setText('about-book-p4', 'about-book-p4');
+            setText('about-book-p5', 'about-book-p5');
+            setText('about-book-p6', 'about-book-p6');
+            setHTML('about-book-quote', 'about-book-quote');
+            setText('about-book-p7', 'about-book-p7');
+            setText('about-book-p8', 'about-book-p8');
+            
+            // Waitlist CTA
+            setText('waitlist-cta-heading', 'waitlist-cta-heading');
+            setText('waitlist-cta-p1', 'waitlist-cta-p1');
+            setText('waitlist-cta-p2', 'waitlist-cta-p2');
+            setText('waitlist-cta-button', 'waitlist-cta-button');
+            
+            // About Karolina Section
+            setText('about-karolina-heading', 'about-karolina-heading');
+            setText('about-karolina-p1', 'about-karolina-p1');
+            setText('about-karolina-p2', 'about-karolina-p2');
+            setText('about-karolina-p3', 'about-karolina-p3');
+            setText('about-karolina-p4', 'about-karolina-p4');
+            setText('about-karolina-p5', 'about-karolina-p5');
+            setText('about-karolina-p6', 'about-karolina-p6');
+            setText('about-karolina-p7', 'about-karolina-p7');
+            
+            // About HerPlay Section
+            setText('about-herplay-heading', 'about-herplay-heading');
+            setText('about-herplay-p1', 'about-herplay-p1');
+            setText('about-herplay-p2', 'about-herplay-p2');
+            setText('about-herplay-p3', 'about-herplay-p3');
+            setText('about-herplay-p4', 'about-herplay-p4');
+            
+            // Footer
+            setText('copyright', 'copyright');
+            setText('privacy-link', 'privacy-link-text');
+            setText('terms-link', 'terms-link-text');
+            
+            // Footer Links
+            const privacyLink = document.getElementById('privacy-link');
+            const privacyUrl = getContent('privacy-link-url');
+            if (privacyLink && privacyUrl) {
+                privacyLink.href = privacyUrl;
+            }
+            
+            const termsLink = document.getElementById('terms-link');
+            const termsUrl = getContent('terms-link-url');
+            if (termsLink && termsUrl) {
+                termsLink.href = termsUrl;
+            }
+            
+            // Social Links
+            const linkedinLink = document.getElementById('linkedin-link');
+            const linkedinUrl = getContent('linkedin-url');
+            if (linkedinLink && linkedinUrl) {
+                linkedinLink.href = linkedinUrl;
+            }
+            
+            const instagramLink = document.getElementById('instagram-link');
+            const instagramUrl = getContent('instagram-url');
+            if (instagramLink && instagramUrl) {
+                instagramLink.href = instagramUrl;
+            }
+        }
+        
+        // Load content when DOM is ready
+        document.addEventListener('DOMContentLoaded', loadContent);
+        
+        // Also load content after Webflow initializes (if using Webflow)
+        if (window.Webflow) {
+            window.Webflow.push(function() {
+                loadContent();
+            });
+        }
+        
+        // Parallax effect on scroll
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallaxBg = document.querySelector('.parallax-bg');
+            const parallaxLayers = document.querySelectorAll('.parallax-layer');
+            
+            if (parallaxBg) {
+                parallaxBg.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+            
+            parallaxLayers.forEach(layer => {
+                layer.style.transform = `translateY(${scrolled * 0.3}px)`;
+            });
+        });
+        
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Book cover interactive effect
+        const bookCover = document.querySelector('.book-cover');
+        const bookWrapper = document.querySelector('.book-cover-wrapper');
+        
+        if (bookWrapper && bookCover) {
+            bookWrapper.addEventListener('mousemove', (e) => {
+                const rect = bookWrapper.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const angleX = (y - centerY) / centerY * -10;
+                const angleY = (x - centerX) / centerX * 10;
+                
+                bookCover.style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg) scale(1.05)`;
+            });
+            
+            bookWrapper.addEventListener('mouseleave', () => {
+                bookCover.style.transform = '';
+            });
+        }
+        
+        // Form submission placeholder
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Form submission will be handled by Webflow. Replace this with Webflow form action.');
+            });
+        });
+    </script>
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Book",
+        "name": "HER PLAY",
+        "author": {
+            "@type": "Person",
+            "name": "Karolina Pelc",
+            "url": "https://www.linkedin.com/in/karolinapelc/",
+            "sameAs": [
+                "https://www.instagram.com/storiesbypelc",
+                "https://www.linkedin.com/in/karolinapelc/"
+            ]
+        },
+        "description": "A journey from Warsaw casino floors to Richard Branson's private retreat. Discover the formula for turning risk into opportunity.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "HerPlay"
+        },
+        "image": "cover_image.png",
+        "potentialAction": {
+            "@type": "ReadAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://herplay.com/book-waitlist"
+            }
+        }
+    }
+    </script>
+</body>
+</html>

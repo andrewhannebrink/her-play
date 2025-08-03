@@ -14,6 +14,13 @@ const Hero = ({ content, formContent, images }) => {
     <section className="hero">
       <div className="parallax-bg"></div>
       <ShootingStars />
+      
+      {/* Author info fixed to bottom left */}
+      <div className="author-info-fixed">
+        <h3 className="author-name">Karolina Pelc</h3>
+        <p className="author-title">Founder | Investor | Mentor | Author</p>
+      </div>
+      
       <div className="hero-content">
         <div 
           className="hero-left"

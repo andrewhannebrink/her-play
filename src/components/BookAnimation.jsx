@@ -118,6 +118,14 @@ const BookAnimation = ({ scrollProgress, bookContent }) => {
       <div className={`book ${isBookClosed ? 'closed' : 'open'}`}>
         {/* Pages */}
         <div className="book-pages">
+          {/* Base page underneath all flippable pages */}
+          <div className="book-base-page">
+            <div className="final-page-content">
+              <h3>Thank you for reading!</h3>
+              <p>Join the waitlist to be notified when HER PLAY launches.</p>
+            </div>
+          </div>
+          
           {pages.map((page, index) => (
             <div 
               key={page.id}

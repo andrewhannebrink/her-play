@@ -7,7 +7,7 @@ const useHeroParallax = () => {
   
   useEffect(() => {
     let wheelAccumulator = 0;
-    const sensitivity = 0.001; // How much progress per pixel of scroll
+    const sensitivity = 0.0008; // How much progress per pixel of scroll
     
     const handleWheel = (e) => {
       e.preventDefault();
@@ -16,8 +16,9 @@ const useHeroParallax = () => {
       wheelAccumulator += e.deltaY;
       
       // Update progress based on wheel delta
+      // Extend range to 4 to allow for multiple page turns
       const deltaProgress = e.deltaY * sensitivity;
-      progressRef.current = Math.max(0, Math.min(1, progressRef.current + deltaProgress));
+      progressRef.current = Math.max(0, Math.min(4, progressRef.current + deltaProgress));
       
       // Cancel any ongoing animation
       if (animationRef.current) {

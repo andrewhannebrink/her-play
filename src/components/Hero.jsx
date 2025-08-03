@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import BookCover from './BookCover';
 import WaitlistForm from './WaitlistForm';
 import ShootingStars from './ShootingStars';
@@ -8,8 +8,6 @@ import './Hero.css';
 const Hero = ({ content, formContent, images }) => {
   const { scrollProgress } = useHeroParallax();
 
-  // Remove this useEffect since we're now permanently locking scroll in CSS
-
   return (
     <section className="hero">
       <div className="parallax-bg"></div>
@@ -18,7 +16,7 @@ const Hero = ({ content, formContent, images }) => {
         <div 
           className="hero-left"
           style={{
-            transform: `translateX(${scrollProgress * 75}%) scale(${1 + scrollProgress * 0.3})`,
+            transform: `translateX(${Math.min(scrollProgress, 1) * 75}%) scale(${1 + Math.min(scrollProgress, 1) * 0.3})`,
             transition: 'transform 0.15s ease-out'
           }}
         >

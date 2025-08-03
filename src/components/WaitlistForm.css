@@ -34,7 +34,7 @@
 }
 
 .form-group input[type="email"]::placeholder {
-  color: rgba(255, 255, 255, 0.6);
+  color: #cc2e29;
 }
 
 .checkbox-group {
@@ -52,7 +52,7 @@
 
 .checkbox-group label {
   font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: #cc2e29;
   line-height: 1.4;
 }
 

@@ -76,23 +76,36 @@
 }
 
 .author-ps {
-  font-style: italic;
-  font-size: 1.125rem;
+  font-family: 'Ballet', cursive;
+  font-size: 5rem;
+  color: #cc2e29;
+  margin-top: 2.5rem;
+  white-space: nowrap;
+  overflow: visible;
 }
 
 /* Glassmorphic Card */
 .glass-card {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-radius: 0;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.8);
   padding: 2rem;
   margin: 2rem 0;
+  margin-top: 100px;
   box-shadow: 
     0 8px 32px 0 rgba(31, 38, 135, 0.2),
     inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease;
+}
+
+.glass-card h2 {
+  color: #cc2e29;
+}
+
+.glass-card p {
+  color: #cc2e29;
 }
 
 .glass-card:hover {
@@ -108,8 +121,14 @@
   bottom: 2rem;
   left: 2rem;
   z-index: 10;
-  background: none;
+  background: transparent !important;
   backdrop-filter: none;
+  mix-blend-mode: normal;
+}
+
+.author-info-fixed::before,
+.author-info-fixed::after {
+  display: none;
 }
 
 .author-name {
@@ -119,6 +138,7 @@
   color: #cc2e29;
   margin: 0;
   line-height: 1.2;
+  background: transparent;
 }
 
 .author-title {
@@ -127,6 +147,7 @@
   color: #cc2e29;
   margin: 0.25rem 0 0 0;
   opacity: 0.9;
+  background: transparent;
 }
 
 /* Mobile Responsive */

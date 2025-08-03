@@ -3,6 +3,7 @@ import BookCover from './BookCover';
 import BookAnimation from './BookAnimation';
 import WaitlistForm from './WaitlistForm';
 import ShootingStars from './ShootingStars';
+import VerticalMediaScroll from './VerticalMediaScroll';
 import useHeroParallax from '../hooks/useHeroParallax';
 import bookContent from '../content/bookContent.json';
 import './Hero.css';
@@ -14,6 +15,7 @@ const Hero = ({ content, formContent, images }) => {
     <section className="hero">
       <div className="parallax-bg"></div>
       <ShootingStars />
+      <VerticalMediaScroll />
       
       {/* Author info fixed to bottom left */}
       <div className="author-info-fixed">

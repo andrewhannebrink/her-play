@@ -25,7 +25,7 @@ const Hero = ({ content, formContent, images }) => {
         <div 
           className="hero-left"
           style={{
-            transform: `translateX(${Math.min(scrollProgress, 1) * 75}%)`,
+            transform: `translateX(${Math.min(scrollProgress, 1) * 45}vw) scale(${1 + Math.min(scrollProgress, 1) * 0.5})`,
             transition: 'transform 0.15s ease-out'
           }}
         >

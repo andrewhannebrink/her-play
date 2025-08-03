@@ -84,7 +84,7 @@
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-radius: 20px;
+  border-radius: 0;
   border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 2rem;
   margin: 2rem 0;
@@ -107,6 +107,8 @@
   bottom: 2rem;
   left: 2rem;
   z-index: 10;
+  background: none;
+  backdrop-filter: none;
 }
 
 .author-name {

@@ -49,11 +49,6 @@ const Hero = ({ content, formContent, images }) => {
             <WaitlistForm formContent={formContent} />
           </div>
           
-          <p className="fade-in author-info">
-            <strong>{content.authorName}</strong><br />
-            {content.authorTagline}
-          </p>
-          
           <p className="fade-in author-ps">{content.authorPS}</p>
         </div>
       </div>

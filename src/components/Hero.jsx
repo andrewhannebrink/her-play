@@ -15,7 +15,13 @@ const Hero = ({ content, formContent, images }) => {
       <div className="parallax-bg"></div>
       <ShootingStars />
       <div className="hero-content">
-        <div className="hero-left">
+        <div 
+          className="hero-left"
+          style={{
+            transform: `translateX(${scrollProgress * 75}%) scale(${1 + scrollProgress * 0.3})`,
+            transition: 'transform 0.15s ease-out'
+          }}
+        >
           <BookCover image={images.bookCover} alt={images.bookCoverAlt} />
         </div>
         

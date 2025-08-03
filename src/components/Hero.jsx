@@ -1,8 +1,10 @@
 import React from 'react';
 import BookCover from './BookCover';
+import BookAnimation from './BookAnimation';
 import WaitlistForm from './WaitlistForm';
 import ShootingStars from './ShootingStars';
 import useHeroParallax from '../hooks/useHeroParallax';
+import bookContent from '../content/bookContent.json';
 import './Hero.css';
 
 const Hero = ({ content, formContent, images }) => {
@@ -16,11 +18,15 @@ const Hero = ({ content, formContent, images }) => {
         <div 
           className="hero-left"
           style={{
-            transform: `translateX(${Math.min(scrollProgress, 1) * 75}%) scale(${1 + Math.min(scrollProgress, 1) * 0.3})`,
+            transform: `translateX(${Math.min(scrollProgress, 1) * 75}%)`,
             transition: 'transform 0.15s ease-out'
           }}
         >
-          <BookCover image={images.bookCover} alt={images.bookCoverAlt} />
+          {scrollProgress < 0.05 ? (
+            <BookCover image={images.bookCover} alt={images.bookCoverAlt} />
+          ) : (
+            <BookAnimation scrollProgress={scrollProgress} bookContent={bookContent} />
+          )}
         </div>
         
         <div 

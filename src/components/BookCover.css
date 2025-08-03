@@ -1,9 +1,8 @@
 /* Book Cover Animation */
 .book-cover-wrapper {
   position: relative;
-  width: 100%;
-  max-width: 500px;
-  height: 700px;
+  width: 400px;
+  height: 600px;
   perspective: 1000px;
   transform-style: preserve-3d;
 }
@@ -47,8 +46,8 @@
 
 @media (max-width: 968px) {
   .book-cover-wrapper {
-    height: 500px;
-    max-width: 350px;
+    width: 320px;
+    height: 400px;
     margin: 0 auto;
   }
 }

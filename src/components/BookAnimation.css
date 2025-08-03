@@ -1,0 +1,220 @@
+.book-animation-container {
+  width: 100%;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 2000px;
+}
+
+.book {
+  position: relative;
+  width: 400px;
+  height: 600px;
+  transform-style: preserve-3d;
+  display: flex;
+}
+
+.book-pages {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+
+.final-cta {
+  text-align: center;
+  opacity: 0.8;
+}
+
+.final-cta h3 {
+  font-family: 'Crimson Text', serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #2a1810;
+}
+
+.final-cta p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #4a3020;
+}
+
+.cta-button {
+  background: #cc2e29;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #aa1e19;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(204, 46, 41, 0.3);
+}
+
+.book-right {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.book-page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-origin: left center;
+  transition: transform 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transform-style: preserve-3d;
+}
+
+.book-page.flipped {
+  transform: rotateY(-180deg);
+}
+
+.page-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.page-front,
+.page-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: #fafaf8;
+  padding: 40px;
+  overflow-y: auto;
+  box-shadow: 0 0 30px rgba(0,0,0,0.1);
+}
+
+/* Remove padding for cover image */
+.page-front:has(.page-cover-image) {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-back {
+  transform: rotateY(180deg);
+}
+
+/* Page content styles */
+.page-cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.page-toc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.page-toc h2 {
+  font-family: 'Crimson Text', serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #2a1810;
+  text-align: center;
+}
+
+.page-toc ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.3rem;
+  line-height: 2.5;
+  color: #4a3020;
+}
+
+.page-toc li {
+  padding-left: 2rem;
+  position: relative;
+}
+
+.page-toc li:before {
+  content: '→';
+  position: absolute;
+  left: 0;
+}
+
+.page-text {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.page-text h2 {
+  font-family: 'Crimson Text', serif;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: #2a1810;
+}
+
+.page-content p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+  color: #333;
+  text-align: justify;
+}
+
+/* Shadow effects during flip */
+.book-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(0,0,0,0.1) 10%, 
+    transparent 100%);
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.book-page.flipped::before {
+  opacity: 1;
+}
+
+/* Mobile responsive */
+@media (max-width: 968px) {
+  .book-animation-container {
+    height: 600px;
+  }
+  
+  .book {
+    width: 320px;
+    height: 400px;
+  }
+  
+  .book.closed {
+    width: 160px;
+  }
+  
+  .page-front,
+  .page-back {
+    padding: 20px;
+  }
+  
+  .page-text h2 {
+    font-size: 1.8rem;
+  }
+  
+  .page-content p {
+    font-size: 0.9rem;
+  }
+}

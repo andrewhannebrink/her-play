@@ -1,7 +1,10 @@
 /* Hero Section with Parallax */
 .hero {
-  min-height: 100vh;
-  position: relative;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,6 +61,8 @@
   justify-content: center;
   align-items: flex-start;
   max-width: 600px;
+  transition: transform 0.15s ease-out, opacity 0.15s ease-out;
+  will-change: transform, opacity;
 }
 
 .hero-subtitle {

@@ -17,6 +17,8 @@ function App() {
         images={bookContent.images}
       />
       
+      <div style={{ height: '100vh' }} />
+      
       <MediaSection content={bookContent.media} />
       
       <AboutSection 

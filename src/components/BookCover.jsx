@@ -15,10 +15,12 @@ const BookCover = ({ image, alt }) => {
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
     
-    const angleX = (y - centerY) / centerY * -10;
-    const angleY = (x - centerX) / centerX * 10;
+    // Simpler rotation calculation
+    const angleX = (y - centerY) / centerY * -15;
+    const angleY = (x - centerX) / centerX * 15;
     
-    bookRef.current.style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg) scale(1.05)`;
+    // Use transform3d for better performance
+    bookRef.current.style.transform = `rotate3d(1, 0, 0, ${angleX}deg) rotate3d(0, 1, 0, ${angleY}deg)`;
   };
 
   const handleMouseLeave = () => {

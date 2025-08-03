@@ -1,0 +1,86 @@
+.shooting-stars-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.shooting-star {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 
+    0 0 6px 2px rgba(255, 255, 255, 0.8),
+    0 0 10px 4px rgba(255, 255, 255, 0.4);
+  animation: shoot 3s linear infinite;
+  opacity: 0;
+}
+
+.shooting-star::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent 0%,
+    rgba(255, 255, 255, 0.4) 70%, 
+    rgba(255, 255, 255, 0.8) 100%
+  );
+  transform: translate(-100%, -50%) rotate(45deg);
+  transform-origin: right center;
+}
+
+@keyframes shoot {
+  0% {
+    opacity: 0;
+    transform: translateX(0) translateY(0);
+  }
+  
+  1% {
+    opacity: 1;
+  }
+  
+  70% {
+    opacity: 1;
+  }
+  
+  100% {
+    opacity: 0;
+    transform: translateX(300px) translateY(300px);
+  }
+}
+
+/* Different star sizes for variety */
+.shooting-star:nth-child(3n) {
+  width: 2px;
+  height: 2px;
+}
+
+.shooting-star:nth-child(3n+1) {
+  width: 3px;
+  height: 3px;
+}
+
+/* Vary animation duration for more natural effect */
+.shooting-star:nth-child(5n) {
+  animation-duration: 2s;
+}
+
+.shooting-star:nth-child(7n) {
+  animation-duration: 4s;
+}
+
+/* Mobile optimization - fewer stars */
+@media (max-width: 768px) {
+  .shooting-star:nth-child(even) {
+    display: none;
+  }
+}

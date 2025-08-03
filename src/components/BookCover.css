@@ -1,10 +1,11 @@
 /* Book Cover Animation */
 .book-cover-wrapper {
   position: relative;
-  margin: 2rem auto;
-  width: min(400px, 90vw);
-  height: 600px;
+  width: 100%;
+  max-width: 500px;
+  height: 700px;
   perspective: 1000px;
+  transform-style: preserve-3d;
 }
 
 .book-cover {
@@ -13,7 +14,7 @@
   position: relative;
   transform-style: preserve-3d;
   animation: floatRotate 6s ease-in-out infinite;
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease-out;
   cursor: pointer;
 }
 
@@ -26,9 +27,7 @@
   height: 100%;
   object-fit: contain;
   border-radius: 10px;
-  box-shadow: 
-    0 20px 40px rgba(0,0,0,0.4),
-    0 40px 80px rgba(0,0,0,0.2);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
 }
 
 @keyframes floatRotate {
@@ -46,8 +45,10 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   .book-cover-wrapper {
     height: 500px;
+    max-width: 350px;
+    margin: 0 auto;
   }
 }

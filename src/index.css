@@ -22,6 +22,7 @@ body {
 
 /* Typography */
 h1, h2, h3 {
+  font-family: 'Crimson Text', serif;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;

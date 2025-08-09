@@ -1,0 +1,102 @@
+.about-author-section {
+  min-height: 100vh;
+  padding: 10vh 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.author-content {
+  position: relative;
+  min-height: 60vh;
+}
+
+.author-bio {
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.floating-achievements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.floating-text {
+  position: absolute;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.1;
+  color: var(--text-white);
+  white-space: nowrap;
+  will-change: transform;
+}
+
+.floating-text-1 {
+  top: 10%;
+  left: 5%;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.floating-text-2 {
+  top: 20%;
+  right: 10%;
+  color: var(--primary-red);
+  opacity: 0.15;
+}
+
+.floating-text-3 {
+  top: 40%;
+  left: 15%;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.floating-text-4 {
+  top: 60%;
+  right: 20%;
+  color: var(--primary-red);
+  opacity: 0.2;
+}
+
+.floating-text-5 {
+  bottom: 30%;
+  left: 10%;
+}
+
+.floating-text-6 {
+  bottom: 20%;
+  right: 15%;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--primary-red);
+  opacity: 0.15;
+}
+
+.author-ps {
+  text-align: center;
+  margin-top: 6rem;
+}
+
+.ps-text {
+  font-family: var(--font-script);
+  font-size: clamp(3rem, 8vw, 6rem);
+  color: var(--primary-red);
+  margin: 0;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .floating-text {
+    font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+  }
+  
+  .floating-text-1,
+  .floating-text-3,
+  .floating-text-6 {
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+  }
+}

@@ -32,13 +32,18 @@ const Hero = () => {
         <h1 ref={titleRef} className="hero-title">
           HER <span className="text-red">PLAY</span>
         </h1>
-        <p ref={subtitleRef} className="hero-subtitle">
-          A journey from Warsaw casino floors to Silicon Valley success
-        </p>
-        <div className="scroll-indicator">
-          <span>Scroll to explore</span>
-          <div className="scroll-arrow"></div>
+        <div ref={subtitleRef} className="hero-subtitle">
+          <p className="subtitle-line">
+            A journey from <span className="highlight">Warsaw casino floors</span>
+          </p>
+          <p className="subtitle-line">
+            to <span className="highlight">Silicon Valley success</span>
+          </p>
         </div>
+      </div>
+      <div className="scroll-indicator">
+        <span>Scroll to explore</span>
+        <div className="scroll-arrow"></div>
       </div>
     </section>
   )

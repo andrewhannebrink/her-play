@@ -4,7 +4,6 @@ import Hero from './components/Hero'
 import AboutBook from './components/AboutBook'
 import AboutAuthor from './components/AboutAuthor'
 import Waitlist from './components/Waitlist'
-import FloatingOrb from './components/FloatingOrb'
 
 function App() {
   const appRef = useRef(null)
@@ -27,7 +26,6 @@ function App() {
 
   return (
     <div className="app" ref={appRef}>
-      <FloatingOrb />
       <Hero />
       <AboutBook />
       <AboutAuthor />

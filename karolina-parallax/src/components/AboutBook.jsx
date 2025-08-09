@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import './AboutBook.css'
+import { getAssetPath } from '../utils/assetPath'
 
 const AboutBook = () => {
   const sectionRef = useRef(null)
@@ -77,7 +78,7 @@ const AboutBook = () => {
           </div>
           <div className="image-column">
             <div ref={imageRef} className="book-image-wrapper fade-in">
-              <img src="/cover_image.png" alt="HER PLAY Book Cover" />
+              <img src={getAssetPath('cover_image.png')} alt="HER PLAY Book Cover" />
               <div className="book-shadow"></div>
             </div>
           </div>
